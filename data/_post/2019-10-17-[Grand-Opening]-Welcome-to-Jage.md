@@ -1,4 +1,5 @@
 ---
+
 title:  "[Grand Opening] Welcome to Jage!"
 header:
   teaser: 
