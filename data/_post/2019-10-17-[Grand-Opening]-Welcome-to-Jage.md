@@ -1,8 +1,6 @@
 ---
-
+layout: post
 title:  "[Grand Opening] Welcome to Jage!"
-header:
-  teaser: 
 categories: 
   - Jaimeen
   - Jage
