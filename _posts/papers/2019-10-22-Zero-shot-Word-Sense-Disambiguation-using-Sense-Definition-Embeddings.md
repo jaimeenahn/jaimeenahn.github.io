@@ -2,18 +2,23 @@
 layout: post
 title:  "Zero-shot Word Sense Disambiguation using Sense"
 categories: 
-  - paper
+  - papers
 tags:
   - update
 ---
 
+
+
 # Zero-shot Word Sense Disambiguation using Sense Definition Embedding
+
 ---
 ## Contents
 1. Introduction
 2. Related Works
 3. Background
+4. EWISE
 ---
+
 ### 1. Introduction
 
 For the task **set of possible senses for the word is assumed for te word is assumed to be known a prori** - 사전에 전제 조건으로 모든 단어의 Sense는 정의 되어있어야한다.  
@@ -42,10 +47,6 @@ supervision bottleneck for WSD를 극복하기 위해 정의를 통합하는 관
 
 **Hypothesis** = 지도학습을 이용한 방법은 어휘적 정보를 활용하여 WSD에서 관찰되거나 관찰되지 않은 words and senses 모두를 향상시킬 수 있을 것. -> **Extended WSD Incorporating Sense Embedding(EWISE)**
 
-<center>기존 | <center>EWISE 
----- | ----
-<center>discrete labels | <center>continuous labels 
-
 EWISE는 기존의 방법과는 다르게 continuous labels을 사용하는데 이는 일반화된 zero-shot learning을 가능하게 한다 
 - 왜? : seen sense 만큼 unseen sense도 인식할 수 있는 능력이 있다
     - 왜? :
@@ -67,6 +68,23 @@ EWISE = embedding of definition을 neural model의 target으로, heuristic한 �
 
 continuous representation for definition = **Universal Sentense Representations** + **learing deep contextualized word representation**을 이용하여 definition embedding을 평가할 것이다.
 
-**구조적 데이터**는 
+구조적 데이터는 Graph를 이용하여 단어를 가장 관계 있는 Sense와 맞추는 역할을 해왔다. **EWISE에서는 definition의 representation을 더 잘 학습시키기 위해 Graph-based structural Knowledge를 사용한다.**
+- TransE : entity들의 translation을 통해 relation들을 모델링한다.
+- ConvE : multi-layer convolutional network를 이용하여 더 표현적인 특징을 학습할 수 있게한다.
 
- 
+### 4.EWISE
+
+**EWISE**
+- Attentive Context Encoder(WSD Task) : 
+    1. BiLSTM을 encoder를 이용하여 sequence of token을 context-aware embedding으로 변환하고, 
+    2. self-attention을 이용하여 현재 단어의 문맥을 보강한다.
+    3. Projection을 이용하여 sense embedding으로 사영하여 sense를 가져온다.
+- Definition Encoder :
+    1. WSD task와 독립적으로 진행하고
+    2. pretrained sentence encoder로 definition을 encoding한다.
+
+#### 4-1,2 Attentive Context Encoder
+
+BiLSTM이 단어의 context dependent representation을 효과적으로 생성하기 때문에 BiLSTM을 이용하여 단어를 임베딩한다.
+
+
