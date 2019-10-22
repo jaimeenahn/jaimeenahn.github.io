@@ -13,7 +13,6 @@ tags:
 1. Introduction
 2. Related Works
 3. Background
-4. 
 ---
 ### 1. Introduction
 
@@ -45,7 +44,7 @@ supervision bottleneck for WSD를 극복하기 위해 정의를 통합하는 관
 
 <center>기존 | <center>EWISE 
 ---- | ----
-<center> discrete labels | <center>continuous labels 
+<center>discrete labels | <center>continuous labels 
 
 EWISE는 기존의 방법과는 다르게 continuous labels을 사용하는데 이는 일반화된 zero-shot learning을 가능하게 한다 
 - 왜? : seen sense 만큼 unseen sense도 인식할 수 있는 능력이 있다
