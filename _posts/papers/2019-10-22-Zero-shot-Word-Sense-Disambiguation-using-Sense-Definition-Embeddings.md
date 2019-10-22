@@ -12,11 +12,13 @@ tags:
 # Zero-shot Word Sense Disambiguation using Sense Definition Embedding
 
 ---
+
 ## Contents
 1. Introduction
 2. Related Works
 3. Background
 4. EWISE
+
 ---
 
 ### 1. Introduction
@@ -74,6 +76,8 @@ continuous representation for definition = **Universal Sentense Representations*
 
 ### 4.EWISE
 
+![Figure1](./assets/img/Kumar et al fig 1.JPG)
+
 **EWISE**
 - Attentive Context Encoder(WSD Task) : 
     1. BiLSTM을 encoder를 이용하여 sequence of token을 context-aware embedding으로 변환하고, 
@@ -85,6 +89,7 @@ continuous representation for definition = **Universal Sentense Representations*
 
 #### 4-1,2 Attentive Context Encoder
 
-BiLSTM이 단어의 context dependent representation을 효과적으로 생성하기 때문에 BiLSTM을 이용하여 단어를 임베딩한다.
+$$S_{w}$$
 
+BiLSTM이 단어의 context dependent representation을 효과적으로 생성하기 때문에 BiLSTM을 이용하여 단어를 임베딩한다.
 
