@@ -5,6 +5,7 @@ categories:
   - papers
 tags:
   - update
+use_math: true
 ---
 
 
@@ -18,6 +19,7 @@ tags:
 2. Related Works
 3. Background
 4. EWISE
+5. Result
 
 ---
 
@@ -89,7 +91,47 @@ continuous representation for definition = **Universal Sentense Representations*
 
 #### 4-1,2 Attentive Context Encoder
 
-$$S_{w}$$
+$S_{w}$ for word $w$는 사전에 알고 있다는 것을 전제로 한다.
 
 BiLSTM이 단어의 context dependent representation을 효과적으로 생성하기 때문에 BiLSTM을 이용하여 단어를 임베딩한다.
 
+1. 2 layer BiLSTM을 이용하여 추출한 $u^{i}=[h^{i}_{f}, h^{i}_{b}]$ = word를 구한다.
+2. 구해진 $u^{i}$를 이용하여 self-attention 통해 $r^{i} = [u^{i}, c^{i}] 를 얻는다.
+3. sense embedding으로 projection $v^{i}=W_{l}r^{i}$
+4. $v^{i}$와 sense inventory의 모든 sense의 embedding들과 consine similarity를 계산하여 score를 계산한다.
+$$
+\hat{p^{i}_{j}} = softmax(dot(v^{i}, \rho_{j}) + dot(b, \rho_{j}));
+$$
+5. Cross Entrophy를 이용하여 로스를 계산
+$$
+\mathcal{L}^{i}_{wsd} = -\sigma(z^{i}_{j}log(\hat(p)^{i}_{j}))
+$$
+
+#### 4-3 Definition Encoder
+
+##### Pretrained Sentense Encoder
+pretrained sentense representation model : InferSent, USE, ELMO, BERT를 사용하여 실험을 진행했고, 각각의 파라미터는 논문을 참고
+
+##### Knowledge Graph Embedding
+WordNet에 포함된 knowledge graph를 이용해서 entity(sense)와 relation over sense(hypernym, part_of) 표현.
+
+goal = sentence encoder를 학습 -> BiLSTM-Max 인코더 선택
+
+하지만, 사실 아직 왜 KG가 필요한지 이해할 수 없다.
+
+#### 5.Result
+
+Q1 : How does EWISE compare to SOTA methods on standardized test set?  
+A1 : EWISE outperforms all supervised and knowledge-based methods
+
+Q2 : What is the effect of ablating key components from EWISE?  
+A2 : 특징들을 지워가며 모델의 영향도에 대해 비교해 본 결과, Sense-Embedding이 없을 때 확연한 degradation이 일어나는 것을 관찰할 수 있었다.(이 과정에서 back-off란?)
+
+Q3 : Does EWISE generalize to rare and unseen words and senses?  
+A3 : EWISE는 rare words에 대해 다른 모델들 보다 높은 F1 스코어를 유지했고, rare senses에 대해 MFS와 LFS를 나누어 비교했을 때 MFS를 희생하기는 했지만 더 큰 LFS에서의 F1 스코어를 얻었다.
+
+Q4 : Can EWISE learn with less annotated data?  
+A4 : 20%의 데이터만을 사용하고 WordNet S1보다 좋은 성능을 냈다.
+
+*[MFS]: Most Frequent Senses
+*[LFS]: Least Frequent Senses
