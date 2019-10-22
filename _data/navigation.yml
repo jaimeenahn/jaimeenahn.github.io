@@ -1,12 +1,9 @@
-# main links
-posts : 
-   - title: "Academic" 
-     children :
-      - title: "papers"
-        url: /_posts/papers/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+main:
+  - title: "Posts"
+    url: /posts/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "About"
+    url: /about/
