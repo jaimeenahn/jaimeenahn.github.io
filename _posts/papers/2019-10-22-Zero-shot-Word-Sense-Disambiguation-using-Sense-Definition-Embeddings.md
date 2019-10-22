@@ -5,6 +5,8 @@ categories:
   - papers
 tags:
   - update
+  - LaTex
+  - MathJax
 use_math: true
 ---
 
