@@ -126,7 +126,7 @@ footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url:  "https://github.com/niklasjang"
+      url:  "https://github.com/jaimeenahn"
 
 defaults:
   # _posts
@@ -140,7 +140,6 @@ defaults:
       comments: true
       share: true
       related: true
-      teaser: /assets/images/500x300.jpg
       use_math: true
   # _pages
   - scope:
