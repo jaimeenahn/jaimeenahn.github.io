@@ -87,7 +87,7 @@ continuous representation for definition = **Universal Sentense Representations*
 
 ### 4.EWISE
 
-![Figure1](../../assets/img/Kumar et al fig 1.JPG)
+![Figure1](/assets/img/Kumar et al fig 1.JPG)
 
 **EWISE**
 - Attentive Context Encoder(WSD Task) : 
