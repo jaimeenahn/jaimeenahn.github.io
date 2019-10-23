@@ -65,9 +65,11 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
+
+##Search
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : lunr # lunr (default), algolia, google
 algolia:
   application_id         : # YOUR_APPLICATION_ID
   index_name             : # YOUR_INDEX_NAME
@@ -198,6 +200,7 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
+encoding: "uft-8"
 
 
 # Markdown Processing
@@ -292,10 +295,18 @@ defaults:
       comments:  true
       share: true
       related: true
-  # page
+      use_math: true
+  # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
       author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
