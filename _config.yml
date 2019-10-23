@@ -43,6 +43,9 @@ author:
   location         : "Seoul, Korea"
   email            : #
   links:
+    - label: "CV"
+      icon: "fas fa-file-pdf"
+      url: "/assets/pdf/CV.pdf"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: jaimeen01@korea.ac.kr
