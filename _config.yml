@@ -20,36 +20,38 @@ remote_theme             : "mmistakes/minimal-mistakes@4.16.0" #You may also opt
 minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 ## Site Settings
-locale                   : "ko-KR" #"en-US" # "ko-KR"
-title                    : "Niklas Jang's Blog" #"Site Title"
-title_separator          : "|"
-# email:
-name                     : "Niklas Jang"
-description: >- # this means to ignore newlines until "baseurl:"
-  "For the world people live in happenessss"
+locale                   : "en-US"
+title                    : "Jaimeen's page == Jage"
+title_separator          : "-"
+subtitle                 : # site tagline that appears below site title in masthead
+name                     : "Jaimeen Ahn"
+description              : "An amazing website."
+url                      : "https://jaimeenahn.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" #/mm-github-pages-starter
-url                      : https://niklasjang.github.io
-github_username          : niklasjang
-github                   : niklasjang
-repository               : "niklasjang/niklasjang.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+github_username          : jaimeenahn
+github                   : jaimeenahn
+repository               : "jaimeenahn/jaimeenahn.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 breadcrumbs              : true # true, false (default)
-teaser                   : /assets/images/500x300.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 words_per_minute         : 100
 
 ## Site Author settings
 author:
-  name                   : "Niklas Jang"
-  avatar                 : /assets/images/niklasjang.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio                    : "사람들을 행복하게 만드는 기술을 연구합니다."
-  location               : "Republic of Korea"
-  email                  :
+  name             : Jaimeen Ahn
+  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "I am an **amazing** person."
+  location         : "Seoul, Korea"
+  email            : #
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:niklajang@gmail.com
+      url: jaimeen01@korea.ac.kr
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: https://github.com/niklasjang
+      url: "https://github.com/jaimeenahn"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/jmnuyv"
 
 ##comments
 comments:
