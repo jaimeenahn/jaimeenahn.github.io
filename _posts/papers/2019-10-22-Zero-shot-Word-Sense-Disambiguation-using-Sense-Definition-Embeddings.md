@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Zero-shot Word Sense Disambiguation using Sense"
 excerpt: "Reviewing the paper"
 date: 2019-10-23
