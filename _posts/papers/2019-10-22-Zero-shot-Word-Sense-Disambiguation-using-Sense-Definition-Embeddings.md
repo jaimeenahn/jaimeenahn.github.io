@@ -16,10 +16,7 @@ classes: wide
 use_math: true
 ---
 
-
-
 # Zero-shot Word Sense Disambiguation using Sense Definition Embedding
-
 ---
 
 ## Contents

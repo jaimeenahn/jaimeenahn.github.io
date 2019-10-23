@@ -1,129 +1,55 @@
 # Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
-
-# Theme Settings
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
 #
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+##theme settings
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+remote_theme             : "mmistakes/minimal-mistakes@4.16.0" #You may also optionally specify a branch, tag, or commit to use by appending an @ and the Git ref (e.g., mmistakes/minimal-mistakes@4.9.0 or mmistakes/minimal-mistakes@bbf3cbc5fd64a3e1885f3f99eb90ba92af84063d). This is useful when rolling back to older versions of the theme. If you don’t specify a Git ref, the latest on master will be used.
+minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
-# Site Settings
-locale                   : "en-US"
-title                    : "Jaimeen's page == Jage"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Jaimeen Ahn"
-description              : "An amazing website."
-url                      : "https://jaimeenahn.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+## Site Settings
+locale                   : "ko-KR" #"en-US" # "ko-KR"
+title                    : "Niklas Jang's Blog" #"Site Title"
+title_separator          : "|"
+# email:
+name                     : "Niklas Jang"
+description: >- # this means to ignore newlines until "baseurl:"
+  "For the world people live in happenessss"
+baseurl                  : "" #/mm-github-pages-starter
+url                      : https://niklasjang.github.io
+github_username          : niklasjang
+github                   : niklasjang
+repository               : "niklasjang/niklasjang.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 breadcrumbs              : true # true, false (default)
-words_per_minute         : 200
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-  disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-  utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
-staticman:
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment by {fields.name}"
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
-  transforms:
-    email                : # "md5"
-  generatedFields:
-    date:
-      type               : # "date"
-      options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
-reCaptcha:
-  siteKey                :
-  secret                 :
-atom_feed:
-  path                   : # blank (default) uses feed.xml
+teaser                   : /assets/images/500x300.jpg # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+words_per_minute         : 100
 
-##Search
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
-search_provider          : lunr # lunr (default), algolia, google
-algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
-google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
-  instant_search         : # false (default), true
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-yandex_site_verification :
-naver_site_verification  :
-
-# Social Sharing
-twitter:
-  username               :
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
-# Analytics
-analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
-
-
-# Site Author
+## Site Author settings
 author:
-  name             : Jaimeen Ahn
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Seoul, Korea"
-  email            : #
+  name                   : "Niklas Jang"
+  avatar                 : /assets/images/niklasjang.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio                    : "사람들을 행복하게 만드는 기술을 연구합니다."
+  location               : "Republic of Korea"
+  email                  :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: jaimeen01@korea.ac.kr
+      url: mailto:niklajang@gmail.com
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/jaimeenahn"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/jmnuyv"
+      url: https://github.com/niklasjang
 
 ##comments
 comments:
@@ -141,23 +67,48 @@ comments:
     theme                : # "github-light" (default), "github-dark"
     issue_term           : # "pathname" (default)
 
-# Reading Files
-include:
-  - _pages
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-encoding: "utf-8"
+##Search
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : lunr # lunr (default), algolia, google
+algolia:
+  #application_id         : 625BUW3LLK # YOUR_APPLICATION_ID
+  #index_name             : my_blog # YOUR_INDEX_NAME
+  #search_only_api_key    : 579cfa9a4c6729981863591c5ca80493 # YOUR_SEARCH_ONLY_API_KEY
+  #powered_by             : true # true (default), false
+google:
+  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  instant_search         : # false (default), truesearch: true
 
 # Outputting
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+## Reading Files
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+encoding: "utf-8"
 
 
 # Plugins (previously gems:)
@@ -166,18 +117,15 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jemoji
   - jekyll-include-cache
 
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url:  "https://github.com/niklasjang"
 
-
-# Defaults
 defaults:
   # _posts
   - scope:
@@ -186,10 +134,11 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
-      comments:  true
+      read_time: true
+      comments: true
       share: true
       related: true
+      teaser: /assets/images/500x300.jpg
       use_math: true
   # _pages
   - scope:
