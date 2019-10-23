@@ -1,13 +1,14 @@
 ---
 layout: post
 title:  "Zero-shot Word Sense Disambiguation using Sense"
+excerpt: "Reviewing the paper"
+date: 2019-10-23
 categories: 
   - papers
 tags:
   - update
   - LaTex
-  - MathJax
-   
+  - MathJax   
 toc : true
 toc_label: "Table of contents"
 toc_icon: "list"  # corresponding Font Awesome icon name (without fa prefix)
