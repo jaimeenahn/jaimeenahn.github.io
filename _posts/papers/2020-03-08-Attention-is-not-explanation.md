@@ -4,6 +4,9 @@ excerpt: "Reviewing the paper"
 date: 2019-10-23
 categories:
   - papers
+sitemap :
+  changefreq : daily
+  priority : 1.0
 tags:
   - update
   - LaTex
