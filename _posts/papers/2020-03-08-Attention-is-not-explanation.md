@@ -1,3 +1,23 @@
+---
+title:  "Attention is not explanation"
+excerpt: "Reviewing the paper"
+date: 2019-10-23
+categories:
+  - papers
+tags:
+  - update
+  - LaTex
+  - MathJax   
+toc : true
+toc_label: "Table of contents"
+toc_icon: "list"  # corresponding Font Awesome icon name (without fa prefix)
+toc_sticky: true
+classes: wide  
+use_math: true
+---
+
+# Attention is not explanation
+
 Attention의 전제 : 높은 attention score를 가진 input(e.g., words)은 모델의 결과에 연관이 있다. --> 하지만 formally 확인된 적이 없다.
 
 Attention이 예측에 신뢰할만한 영향을 줬다고 가정하면, 다음과 같은 성질은 만족해야한다.
